@@ -1,0 +1,22 @@
+{
+  "name": "docker-src",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "docker:start-dev": "docker-compose up -d -V nginx nest-dev redis mongodb mongo-express",
+    "docker:build-dev": "docker-compose build nest-dev",
+
+    "docker:start-prod": "docker-compose up -d -V nginx nest-prod redis  mongodb mongo-express",
+    "docker:stop-dev": "docker-compose stop nginx nest-dev redis  mongodb mongo-express",
+    "docker:stop-prod": "docker-compose stop nginx nest-prod redis  mongodb mongo-express",
+    "docker:shell-mongodb": "docker exec -it server-mongodb bash",
+    "docker:shell-nest-dev": "docker exec -it server-nest-dev bash",
+    "docker:shell-nest-prod": "docker exec -it server-nest-prod bash"
+  },
+  "dependencies": {
+    "helmet": "^5.1.0"
+  }
+}

@@ -1,0 +1,4 @@
+/nest-src/node_modules/
+/nest-src/dist/
+/mongodb-data/
+.env

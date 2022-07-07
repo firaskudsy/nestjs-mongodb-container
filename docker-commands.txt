@@ -1,0 +1,16 @@
+When you use npm Installed a new package when , Need to use -V Parameter to recreate the container node_modules Anonymous data volume .
+
+    docker-compose up -d -V dev mongodb mongo-express
+
+Check the status of each container
+
+    docker ps
+
+View the container's log
+
+    docker logs server-dev
+    docker logs server-dev -f # -f  Used for parameter continuous output logs
+
+Into the container shell
+
+    docker exec -it server-mongodb bash #  Get into mongo Containers 
